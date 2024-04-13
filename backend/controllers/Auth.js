@@ -21,7 +21,7 @@ exports.signup = async (req, res) => {
         message: "Passwords do not match",
       });
     }
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({email});
     if (existingUser) {
       console.log("Email", email);
       return res.status(401).json({
