@@ -10,7 +10,8 @@ const fileUpload = require("express-fileupload");
 dotenv.config();
 const PORT=process.env.PORT || 4000
 const allowedOrigins = [
-	'http://localhost:3000'
+	'http://localhost:3000',
+	'https://bloggerly-tau.vercel.app'
   ];
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cors({
